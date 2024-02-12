@@ -1,0 +1,59 @@
+{
+  "terminal.integrated.fontSize": 16,
+  "workbench.startupEditor": "newUntitledFile",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "breadcrumbs.enabled": true,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Cascadia Code",
+  // "editor.fontFamily": " Jetbrains Mono, monospace",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": ["--generate-members"],
+  "prettier.semi": false,
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "editor.renderWhitespace": "none",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.pythonPath": "/usr/bin/python3",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.colorTheme": "One Dark Pro",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "debug.onTaskErrors": "showErrors",
+  "go.toolsManagement.autoUpdate": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontSize": 15,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "redhat.telemetry.enabled": false,
+  "oneDarkPro.italic": false,
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "git.autofetch": true,
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false,
+  "editor.accessibilitySupport": "off",
+  "window.zoomLevel": 1
+}
+

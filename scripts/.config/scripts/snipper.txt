@@ -1,0 +1,5 @@
+encry and compress:
+ tar -czvf - folder | gpg --no-symkey-cache -c > folder.tar.gz.gpg
+
+desc and descomposs:
+  gpg -d folder.tar.gz.gpg | tar -xvfz - 
