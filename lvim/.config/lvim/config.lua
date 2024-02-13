@@ -1,5 +1,6 @@
 -- install plugins
 lvim.plugins = {
+  "ChristianChiarulli/swenv.nvim",
   "stevearc/dressing.nvim",
   "mfussenegger/nvim-dap-python",
   "nvim-neotest/neotest",
@@ -18,8 +19,8 @@ lvim.format_on_save.enabled = true
 lvim.format_on_save.pattern = { "*.py" }
 
 -- setup linting
--- local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup { { command = "flake8", filetypes = { "python" } } }
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup { { command = "flake8", filetypes = { "python" } } }
 
 -- setup debug adapter
 lvim.builtin.dap.active = true
