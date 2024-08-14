@@ -1,0 +1,11 @@
+Host lab 
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/jegasape-work
+  IdentitiesOnly yes
+
+Host personal 
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/jegasape-pc
+  IdentitiesOnly yes
