@@ -19,7 +19,7 @@ vim.opt.autoindent = true
 
 vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
-vim.opt.laststatus = 2
+vim.opt.laststatus = 3
 
 -- automatically install python syntax highlighting
 lvim.builtin.treesitter.ensure_installed = {
