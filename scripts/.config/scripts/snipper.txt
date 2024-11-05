@@ -1,7 +1,6 @@
-encry and compress:
- tar -czvf - folder | gpg --no-symkey-cache -c > folder.tar.gz.gpg
+ 1-) tar -czvf - folder | gpg --symmetric --no-symkey-cache --cipher-algo AES256 --armor --digest-algo SHA512 -o $(uuidgen).tar.gz.gpg
 
-desc and descomposs:
-  gpg -d folder.tar.gz.gpg | tar -xvfz - 
+ 2-) gpg --decrypt folder.tar.gz.gpg | tar -xvfz - 
 
-Tm1FMk5UWTNOakUzTXpZeE56QTJOUW9AcHJvdG9uLm1l
+ 3-) echo -n $1 | od -A n -t x1 | sed 's/ *//g'
+
