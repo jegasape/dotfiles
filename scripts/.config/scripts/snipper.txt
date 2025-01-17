@@ -4,3 +4,5 @@
 
  3-) echo -n $1 | od -A n -t x1 | sed 's/ *//g'
 
+ 4-) ssh -i ~/.ssh/yek -p 2222 -L 8080:external-server:80 -D 9999 root@fish -N
+
