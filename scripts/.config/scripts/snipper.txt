@@ -1,4 +1,4 @@
- 1-) tar -czvf - folder | gpg --symmetric --no-symkey-cache --cipher-algo AES256 --armor --digest-algo SHA512 -o $(uuidgen).tar.gz.gpg
+ 1-) tar -czvf - folder | gpg --symmetric --no-symkey-cache --cipher-algo AES256 --digest-algo SHA512 -o $(uuidgen).tar.gz.gpg
 
  2-) gpg --decrypt folder.tar.gz.gpg | tar -xvzf - 
 
