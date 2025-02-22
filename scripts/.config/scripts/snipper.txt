@@ -1,8 +1,9 @@
- 1-) tar -czvf - folder | gpg --symmetric --no-symkey-cache --cipher-algo AES256 --digest-algo SHA512 -o $(uuidgen).tar.gz.gpg
+tar -czvf - folder | gpg --symmetric --no-symkey-cache --cipher-algo AES256 --digest-algo SHA512 -o $(uuidgen).tar.gz.gpg
 
- 2-) gpg --decrypt folder.tar.gz.gpg | tar -xvzf - 
+gpg --decrypt folder.tar.gz.gpg | tar -xvzf - 
 
- 3-) echo -n $1 | od -A n -t x1 | sed 's/ *//g'
+echo -n $1 | od -A n -t x1 | sed 's/ *//g'
 
- 4-) ssh -i ~/.ssh/yek -p 2222 -L 8080:external-server:80 -D 9999 root@fish -N
+ssh -i ~/.ssh/yek -p 2222 -L 8080:external-server:80 -D 9999 root@fish -N
 
+rsync -avz --progress jegasape@pi:/
