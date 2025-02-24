@@ -7,3 +7,5 @@ echo -n $1 | od -A n -t x1 | sed 's/ *//g'
 ssh -i ~/.ssh/yek -p 2222 -L 8080:external-server:80 -D 9999 root@fish -N
 
 rsync -avz --progress jegasape@pi:/
+
+s/\(\w.*\)/data[0] = "\1";
