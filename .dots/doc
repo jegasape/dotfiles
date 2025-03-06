@@ -1,4 +1,4 @@
-pre-commit
+ pre-commit
 repos:
   - repo: https://github.com/psf/black
     rev: 23.1.0
@@ -84,5 +84,40 @@ mi_proyecto/
 │── poetry.lock                      # Archivo de bloqueo de dependencias
 │── README.md                        # Descripción del proyecto
 │── LICENSE                          # Licencia del proyecto
+
+
+#!/bin/bash
+
+
+if [ -z "$1" ]; then
+    echo "Uso: $0 <name-demo>"
+    exit 1
+fi
+
+
+PROJECT_NAME="$1"
+
+
+mkdir -p $PROJECT_NAME/{src/$PROJECT_NAME/{services,repositories,models,utils},tests/{unit,integration,e2e,performance},docs,infrastructure/{terraform,kubernetes,ansible},.github/workflows}
+
+# Crear archivos base
+touch $PROJECT_NAME/{README.md,LICENSE,Makefile,Dockerfile,docker-compose.yml,pyproject.toml,poetry.lock,.gitignore,.dockerignore,.flake8,.mypy.ini,.pre-commit-config.yaml}
+touch $PROJECT_NAME/src/$PROJECT_NAME/{__init__.py,main.py,config.py,cli.py}
+touch $PROJECT_NAME/src/$PROJECT_NAME/services/{__init__.py,service_1.py,service_2.py}
+touch $PROJECT_NAME/src/$PROJECT_NAME/repositories/{__init__.py,repository_1.py,repository_2.py}
+touch $PROJECT_NAME/src/$PROJECT_NAME/models/{__init__.py,model_1.py,model_2.py}
+touch $PROJECT_NAME/src/$PROJECT_NAME/utils/{__init__.py,logger.py,security.py}
+touch $PROJECT_NAME/tests/{__init__.py}
+touch $PROJECT_NAME/tests/unit/{__init__.py,test_service_1.py}
+touch $PROJECT_NAME/tests/integration/{__init__.py,test_repository_1.py}
+touch $PROJECT_NAME/tests/e2e/{__init__.py,test_full_flow.py}
+touch $PROJECT_NAME/tests/performance/{__init__.py,test_load.py}
+touch $PROJECT_NAME/docs/{architecture.md,api.md,deployment.md,usage.md}
+touch $PROJECT_NAME/.github/workflows/{ci.yml,cd.yml}
+
+echo "Done '$PROJECT_NAME'."
+
+
+
 
 
