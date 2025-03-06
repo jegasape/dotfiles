@@ -1,0 +1,88 @@
+pre-commit
+repos:
+  - repo: https://github.com/psf/black
+    rev: 23.1.0
+    hooks:
+      - id: black
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+      - id: flake8
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.1.1
+    hooks:
+      - id: mypy
+
+
+mi_proyecto/
+│── src/                           # Código fuente principal
+│   ├── mi_proyecto/               # Módulo principal del proyecto
+│   │   ├── __init__.py            # Inicialización del paquete
+│   │   ├── main.py                # Punto de entrada (si aplica)
+│   │   ├── config.py              # Configuración centralizada
+│   │   ├── cli.py                 # Interfaz de línea de comandos (si aplica)
+│   │   ├── services/              # Lógica de negocio y servicios
+│   │   │   ├── __init__.py
+│   │   │   ├── service_1.py
+│   │   │   ├── service_2.py
+│   │   ├── repositories/          # Capa de persistencia (DB, API externas)
+│   │   │   ├── __init__.py
+│   │   │   ├── repository_1.py
+│   │   │   ├── repository_2.py
+│   │   ├── models/                # Modelos de datos (Pydantic, SQLAlchemy, etc.)
+│   │   │   ├── __init__.py
+│   │   │   ├── model_1.py
+│   │   │   ├── model_2.py
+│   │   ├── utils/                 # Utilidades y helpers
+│   │   │   ├── __init__.py
+│   │   │   ├── logger.py
+│   │   │   ├── security.py
+│
+│── tests/                         # Pruebas del proyecto
+│   ├── unit/                      # Pruebas unitarias
+│   │   ├── __init__.py
+│   │   ├── test_service_1.py
+│   ├── integration/                # Pruebas de integración
+│   │   ├── __init__.py
+│   │   ├── test_repository_1.py
+│   ├── e2e/                        # Pruebas end-to-end
+│   │   ├── __init__.py
+│   │   ├── test_full_flow.py
+│   ├── performance/                # Pruebas de rendimiento
+│   │   ├── __init__.py
+│   │   ├── test_load.py
+│
+│── docs/                          # Documentación del proyecto
+│   ├── architecture.md            # Documentación técnica
+│   ├── api.md                     # Documentación de la API
+│   ├── deployment.md              # Guía de despliegue
+│   ├── usage.md                   # Instrucciones de uso
+│
+│── infrastructure/                 # Infraestructura como código (IaC)
+│   ├── terraform/                  # Configuración de Terraform (si aplica)
+│   ├── kubernetes/                 # Manifests de Kubernetes (si aplica)
+│   ├── ansible/                    # Scripts de Ansible (si aplica)
+│
+│── .github/                        # Configuración para GitHub Actions
+│   ├── workflows/
+│   │   ├── ci.yml                  # Pipeline de integración continua
+│   │   ├── cd.yml                  # Pipeline de despliegue continuo
+│
+│── .pre-commit-config.yaml         # Configuración de hooks de pre-commit
+│── .flake8                         # Configuración del linter
+│── .mypy.ini                       # Configuración de análisis estático
+│── .gitignore                      # Archivos a ignorar en Git
+│── .dockerignore                   # Archivos a ignorar en Docker
+│── Dockerfile                      # Definición del contenedor
+│── docker-compose.yml               # Configuración multi-servicio en Docker
+│── Makefile                         # Comandos de automatización
+│── pyproject.toml                   # Configuración de Poetry y dependencias
+│── poetry.lock                      # Archivo de bloqueo de dependencias
+│── README.md                        # Descripción del proyecto
+│── LICENSE                          # Licencia del proyecto
+
+
