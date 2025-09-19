@@ -9,3 +9,5 @@ ssh -i ~/.ssh/yek -p 2222 -L 8080:external-server:80 -D 9999 root@fish -N
 rsync -avz --progress jegasape@pi:/
 
 s/\(\w.*\)/data[0] = "\1";
+
+s/^\s*\(\w\+\).*/& `json:"\L\1"`/
