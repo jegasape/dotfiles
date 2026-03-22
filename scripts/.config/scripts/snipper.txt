@@ -8,6 +8,8 @@ ssh -i ~/.ssh/yek -p 2222 -L 8080:external-server:80 -D 9999 root@fish -N
 
 ssh -t -L 1080:localhost:1080 -p 52184 pi@10.0.0.10 "bash -i -c 'ssh -D 1080 remote-server@10.0.0.30'" 
 
+ssh -f -N -q -D 1080 -p 52184 -4 root@remote-server
+
 rsync -avz --progress jegasape@pi:/
 
 s/\(\w.*\)/data[0] = "\1";
