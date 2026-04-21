@@ -73,3 +73,5 @@ stow -D zsh
 stow -R zsh
 ```
 
+[<img src="https://raw.githubusercontent.com/jegasape/dotfiles/refs/heads/main/image/1707097983679910265.jpg" width="1050" height="668" />](1706411303)
+
