@@ -1,0 +1,114 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$git_state\
+$golang\
+$zig\
+$nodejs\
+$bun\
+$python\
+$rust\
+$docker_context\
+$nix_shell\
+$aws\
+$cmd_duration\
+$line_break\
+$jobs\
+$character"""
+
+[directory]
+style             = "bold cyan"
+truncation_length = 3
+truncate_to_repo  = true
+format            = '[\[]($style)[$path](bold cyan)[\]]($style) '
+
+[git_branch]
+symbol = "\ue0a0"
+format = '[\[]($style)[$symbol $branch](bold yellow)[\]]($style) '
+style  = "bold yellow"
+truncation_length = 30
+
+[git_status]
+format     = '[\[]($style)[$all_status$ahead_behind](bold red)[\]]($style) '
+style      = "bold red"
+staged     = "[+$count](bold green)"
+modified   = "[!$count](bold red)"
+untracked  = "[?$count](bold yellow)"
+deleted    = "[-$count](bold red)"
+conflicted = "[=$count](bold red)"
+ahead      = "[\u21e1$count](bold cyan)"
+behind     = "[\u21e3$count](bold cyan)"
+diverged   = "[\u21e1$ahead_count\u21e3$behind_count](bold red)"
+stashed    = "[\u2261](bold blue)"
+renamed    = "[\u00bb$count](bold yellow)"
+
+[git_state]
+format = '[\[]($style)[$state $progress_current/$progress_total](bold yellow)[\]]($style) '
+style  = "bold yellow"
+
+[golang]
+symbol = "\ue627"
+format = '[\[]($style)[$symbol $version](bold cyan)[\]]($style) '
+style  = "bold cyan"
+
+[zig]
+symbol = "\ue6a9"
+format = '[\[]($style)[$symbol $version](bold yellow)[\]]($style) '
+style  = "bold yellow"
+
+[nodejs]
+symbol = "\uf898"
+format = '[\[]($style)[$symbol $version](bold green)[\]]($style) '
+style  = "bold green"
+
+[bun]
+symbol = "\ue6f7"
+format = '[\[]($style)[$symbol $version](bold yellow)[\]]($style) '
+style  = "bold yellow"
+
+[python]
+symbol = "\ue235"
+format = '[\[]($style)[$symbol $version( $virtualenv)](bold yellow)[\]]($style) '
+style  = "bold yellow"
+
+[rust]
+symbol = "\ue7a8"
+format = '[\[]($style)[$symbol $version](bold red)[\]]($style) '
+style  = "bold red"
+
+[docker_context]
+symbol          = "\uf308"
+format          = '[\[]($style)[$symbol $context](bold blue)[\]]($style) '
+style           = "bold blue"
+only_with_files = true
+
+[nix_shell]
+symbol = "\u2744"
+format = '[\[]($style)[$symbol $state( $name)](bold blue)[\]]($style) '
+style  = "bold blue"
+
+[aws]
+symbol   = "\u03bb"
+format   = '[\[]($style)[$symbol $region](bold yellow)[\]]($style) '
+style    = "bold yellow"
+disabled = false
+
+[jobs]
+symbol           = "\u2726"
+format           = '[\[]($style)[$symbol$number](bold blue)[\]]($style) '
+style            = "bold blue"
+number_threshold = 1
+
+[character]
+success_symbol = "[\u2192](bold green)"
+error_symbol   = "[\u2192](bold red)"
+vimcmd_symbol  = "[\u2190](bold yellow)"
+
+[line_break]
+disabled = false
+
+[time]
+disabled = true

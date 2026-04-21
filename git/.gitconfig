@@ -1,0 +1,9 @@
+[user]
+	name = jegasape
+	email = jegasape@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
+[pull]
+	rebase = false

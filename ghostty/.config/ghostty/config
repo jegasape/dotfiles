@@ -1,0 +1,29 @@
+# ─── Fuente ───────────────────────────────────
+font-family         = JetBrainsMono Nerd Font Mono
+font-size           = 13
+font-thicken        = true
+
+# ─── Cursor ───────────────────────────────────
+cursor-style        = block
+cursor-style-blink  = true
+shell-integration-features = no-cursor
+
+# ─── Shell ────────────────────────────────────
+command             = /bin/zsh
+shell-integration   = zsh
+
+# ─── Apariencia ───────────────────────────────
+theme               = Arthur
+background-opacity  = 0.90
+background-blur-radius = 20
+
+# ─── Ventana ──────────────────────────────────
+window-padding-x    = 12
+window-padding-y    = 8
+window-decoration   = false
+
+# ─── Scrollback ───────────────────────────────
+scrollback-limit    = 10000
+
+# ─── Copiar al seleccionar ────────────────────
+copy-on-select      = true
